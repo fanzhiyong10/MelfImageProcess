@@ -57,7 +57,7 @@ class ImageProcessViewController: UIViewController {
     /// - position: center
     /// - scale: scaleToFit
     func showOrigionImage() {
-        print("showOrigionImage")
+//        print("showOrigionImage")
         
         guard let path = self.origionImageURL?.path else { return }
         let image = UIImage(contentsOfFile: path)
@@ -88,7 +88,7 @@ class ImageProcessViewController: UIViewController {
     
     var scale: CGFloat = 1.0
     @objc func pinchImage(_ sender: UIPinchGestureRecognizer) {
-        print("pinchImage")
+//        print("pinchImage")
         switch sender.state {
         case .began:
             break
@@ -97,6 +97,15 @@ class ImageProcessViewController: UIViewController {
             DispatchQueue.main.async {
                 let scale_tmp = self.scale * sender.scale
                 self.imageView_original.transform = CGAffineTransform(scaleX: scale_tmp, y: scale_tmp)
+                
+                // show/hide: button_Show_background
+                if self.imageView_original.frame.contains(self.view.frame) {
+                    // hide
+                    self.button_Show_background.isHidden = true
+                } else {
+                    // show
+                    self.button_Show_background.isHidden = false
+                }
             }
             
             break
@@ -111,7 +120,7 @@ class ImageProcessViewController: UIViewController {
     }
     
     @objc func draggingImage(_ sender: UIPanGestureRecognizer) {
-        print("draggingImage")
+//        print("draggingImage")
         
         let v = sender.view!
         switch sender.state {
@@ -121,6 +130,15 @@ class ImageProcessViewController: UIViewController {
             c.x += delta.x; c.y += delta.y
             v.center = c
             sender.setTranslation(.zero, in: v.superview)
+            
+            // show/hide: button_Show_background
+            if self.imageView_original.frame.contains(self.view.frame) {
+                // hide
+                self.button_Show_background.isHidden = true
+            } else {
+                // show
+                self.button_Show_background.isHidden = false
+            }
         default: break
         }
     }
