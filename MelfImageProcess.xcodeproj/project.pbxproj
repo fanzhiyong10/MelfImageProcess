@@ -16,6 +16,8 @@
 		663E957528EBDDA900B25156 /* MelfImageProcessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663E957428EBDDA900B25156 /* MelfImageProcessTests.swift */; };
 		663E957F28EBDDA900B25156 /* MelfImageProcessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663E957E28EBDDA900B25156 /* MelfImageProcessUITests.swift */; };
 		663E958128EBDDA900B25156 /* MelfImageProcessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663E958028EBDDA900B25156 /* MelfImageProcessUITestsLaunchTests.swift */; };
+		663E958F28EBE09100B25156 /* bee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 663E958E28EBE09100B25156 /* bee.jpg */; };
+		663E959228EBE0F200B25156 /* ImageProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663E959128EBE0F200B25156 /* ImageProcessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		663E957A28EBDDA900B25156 /* MelfImageProcessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelfImageProcessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		663E957E28EBDDA900B25156 /* MelfImageProcessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelfImageProcessUITests.swift; sourceTree = "<group>"; };
 		663E958028EBDDA900B25156 /* MelfImageProcessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelfImageProcessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		663E958E28EBE09100B25156 /* bee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bee.jpg; sourceTree = "<group>"; };
+		663E959128EBE0F200B25156 /* ImageProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		663E955C28EBDDA800B25156 /* MelfImageProcess */ = {
 			isa = PBXGroup;
 			children = (
+				663E959028EBE0DE00B25156 /* controller */,
+				663E958D28EBE07C00B25156 /* res */,
 				663E955D28EBDDA800B25156 /* AppDelegate.swift */,
 				663E955F28EBDDA800B25156 /* SceneDelegate.swift */,
 				663E956128EBDDA800B25156 /* ViewController.swift */,
@@ -125,6 +131,22 @@
 				663E958028EBDDA900B25156 /* MelfImageProcessUITestsLaunchTests.swift */,
 			);
 			path = MelfImageProcessUITests;
+			sourceTree = "<group>";
+		};
+		663E958D28EBE07C00B25156 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				663E958E28EBE09100B25156 /* bee.jpg */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		663E959028EBE0DE00B25156 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				663E959128EBE0F200B25156 /* ImageProcessViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +255,7 @@
 			files = (
 				663E956A28EBDDA900B25156 /* LaunchScreen.storyboard in Resources */,
 				663E956728EBDDA900B25156 /* Assets.xcassets in Resources */,
+				663E958F28EBE09100B25156 /* bee.jpg in Resources */,
 				663E956528EBDDA800B25156 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663E959228EBE0F200B25156 /* ImageProcessViewController.swift in Sources */,
 				663E956228EBDDA800B25156 /* ViewController.swift in Sources */,
 				663E955E28EBDDA800B25156 /* AppDelegate.swift in Sources */,
 				663E956028EBDDA800B25156 /* SceneDelegate.swift in Sources */,
@@ -445,6 +469,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +498,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
