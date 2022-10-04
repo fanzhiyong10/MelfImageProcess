@@ -31,6 +31,7 @@ class ImageProcessViewController: UIViewController {
     var contentView: UIView!
     func showContentView() {
         self.contentView = UIView()
+        self.contentView.backgroundColor = .black
         self.view.addSubview(self.contentView)
         
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,8 +48,6 @@ class ImageProcessViewController: UIViewController {
 
         // origional
         self.showOrigionImage()
-        
-        
     }
     
     var imageView_original: UIImageView!

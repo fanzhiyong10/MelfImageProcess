@@ -4,6 +4,8 @@
 <dict>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>photo save in library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The app would like to let you choose an item from your Photos.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

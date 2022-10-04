@@ -17,35 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL0-nc-fTt">
-                                <rect key="frame" x="125" y="234" width="117" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL0-nc-fTt">
+                                <rect key="frame" x="124" y="198" width="166" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="JrI-rW-NGM"/>
+                                    <constraint firstAttribute="height" constant="31" id="aVA-Jy-xF3"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Saved image 1"/>
                                 <connections>
                                     <action selector="processImage1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="26v-Tr-6mq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN3-O6-ajW">
-                                <rect key="frame" x="124" y="333" width="119" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sug-10-d7i">
+                                <rect key="frame" x="133.5" y="117" width="147" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="6cK-qU-EiC"/>
+                                    <constraint firstAttribute="height" constant="36" id="KYB-mr-HXh"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Saved image 2"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload image" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="shY-qu-o8z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XL0-nc-fTt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CT6-3O-t7c"/>
+                            <constraint firstItem="sug-10-d7i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="Jyg-7b-93b"/>
+                            <constraint firstItem="XL0-nc-fTt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="TTm-Jd-aku"/>
+                            <constraint firstItem="sug-10-d7i" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oJf-1U-Hh6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BOT-WG-cw5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+            <point key="canvasLocation" x="821.73913043478262" y="136.60714285714286"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
