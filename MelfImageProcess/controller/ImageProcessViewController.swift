@@ -87,6 +87,7 @@ class ImageProcessViewController: UIViewController {
         ])
     }
     
+    var scale: CGFloat = 1.0
     @objc func pinchImage(_ sender: UIPinchGestureRecognizer) {
         print("pinchImage")
         switch sender.state {
@@ -95,12 +96,14 @@ class ImageProcessViewController: UIViewController {
             
         case .changed:
             DispatchQueue.main.async {
-                self.imageView_original.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
+                let scale_tmp = self.scale * sender.scale
+                self.imageView_original.transform = CGAffineTransform(scaleX: scale_tmp, y: scale_tmp)
             }
             
             break
             
         case .ended:
+            self.scale *= sender.scale
             break
             
         default:
@@ -108,17 +111,17 @@ class ImageProcessViewController: UIViewController {
         }
     }
     
-    @objc func draggingImage(_ p: UIPanGestureRecognizer) {
+    @objc func draggingImage(_ sender: UIPanGestureRecognizer) {
         print("draggingImage")
         
-        let v = p.view!
-        switch p.state {
+        let v = sender.view!
+        switch sender.state {
         case .began, .changed:
-            let delta = p.translation(in:v.superview)
+            let delta = sender.translation(in:v.superview)
             var c = v.center
             c.x += delta.x; c.y += delta.y
             v.center = c
-            p.setTranslation(.zero, in: v.superview)
+            sender.setTranslation(.zero, in: v.superview)
         default: break
         }
     }
