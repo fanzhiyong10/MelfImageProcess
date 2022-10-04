@@ -20,7 +20,7 @@ class ImageProcessViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = ""
         
-        // image
+        // image container
         self.showContentView()
         
         // buttons
